@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="bending">
+        <div class="input">
+            <h1>Beam Properties</h1>
+            <label for="options">Choose an Load:</label>
+            <select id="options">
+                <option value="PointLoad">Point Load</option>
+                <option value="UDL">UDL</option>
+            </select>         
+
+            <label for="material">Select Material:</label>
+            <select id="material">
+                <option value="Steel">Steel</option>
+                <option value="Aluminum">Aluminum</option>
+                <option value="Wood">Wood</option>
+            </select><br>
+
+            <div id="pointLoadPosInput" style="display: none;">
+                <label for="position">Position of Point Load from Left End (in m):<br>
+                    <input type="number" id="position" value="2.5">
+                </label><br>
+            </div>
+
+            
+            <label for="beamlength">Beam Length (in m):<br><input type="number" id="beamlength" value="5"></label><br>
+            <label for="Width (mm):">width (in m):<br><input type="number" id="width" value="2"></label><br>
+            <label for="depth">depth (in m):<br><input type="number" id="depth" value="2"></label><br>
+            <label for="load">load (in kg):<br><input type="number" id="load" value="5"></label><br>
+            <label for="y">y (in m):<br><input type="number" id="y" value="1"></label><br>
+            <button id="calculate" >Calculate</button>
+        </div>
+        <div class="output">
+            <h1>Result</h1>
+            <div>
+                <h2>Bending Stress:<p id="result"></p></h2>
+                <h2>I:<p id="I"></p></h2>
+                <h2>M:<p id="M"></p></h2>
+                <div id="error_msg"><h2><p id="error"></p></h2></div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
